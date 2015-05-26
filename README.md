@@ -1,5 +1,5 @@
-#Famous-Gulp-Seed
-> A seed project to get started with the famous engine with Browserify and Gulp as a task manager
+#[Famous][1]-[Gulp][2]-Seed
+> A seed project to get started with the famous engine with Browserify and using Gulp as a task manager
 
 ### Features
  - Browserify using watchify and babelify (ES6)
@@ -12,8 +12,8 @@
 
 ```bash
 git clone https://github.com/WhyFamous/famous-gulp-seed
-cd engine-seed
-# rm -rf .git && git init && git commit -m "Make it so" # optionally reset git history
+cd famous-gulp-seed
+# rm -rf .git && git init && git commit -m "Initial Commit" # optionally reset git history
 npm i # install dependencies
 ```
 
@@ -36,3 +36,6 @@ npm i # install dependencies
 ###LICENSE
 
 MIT
+
+[1]: https://github.com/Famous/engine
+[2]: https://github.com/gulpjs/gulp
