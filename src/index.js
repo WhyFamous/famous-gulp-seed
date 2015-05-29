@@ -1,5 +1,3 @@
-'use strict';
-
 // Famous dependencies
 import DOMElement from 'famous/dom-renderables/DOMElement';
 import FamousEngine from 'famous/core/FamousEngine';

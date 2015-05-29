@@ -1,4 +1,4 @@
-var dest = "./dist";
+var dest = './dist';
 var src = './src';
 
 module.exports = {
@@ -23,6 +23,17 @@ module.exports = {
   styles: {
     src: src + "/styles/**",
     dest: dest + "/styles"
+  },
+  paths: {
+    src: src,
+    scripts: src + '/js',
+    dest: dest,
+    wildcards: {
+      scripts: src + '/js/**/*.js',
+      markup: src + '/**/*.html',
+      styles: src + '/styles/**/*',
+      images: src + '/images/**/*'
+    }
   },
   browserify: {
     // A separate bundle will be generated for each
