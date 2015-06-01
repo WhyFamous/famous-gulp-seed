@@ -1,4 +1,4 @@
-var dest = './dist';
+var dest = './public';
 var src = './src';
 
 module.exports = {
@@ -51,7 +51,20 @@ module.exports = {
   },
   production: {
     cssSrc: dest + '/*.css',
-    jsSrc: dest + '/*.js',
+    jsSrc: dest + '/js/*.js',
+    jsdest: dest + '/js',
     dest: dest
+  },
+  uglifyJs: {
+    compress: {
+      dead_code: true,
+      sequences: true,
+      conditionals: true,
+      booleans: true,
+      unused: true,
+      if_return: true,
+      join_vars: true,
+      drop_debugger: true
+    }
   }
 };

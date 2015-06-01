@@ -4,12 +4,10 @@
   "description": "seed project for a browserified version using Gulp of the Famous Engine",
   "browser": "src/index.js",
   "scripts": {
-    "build": "browserify src/index.js -g uglifyify | uglifyjs --screw-ie8 -m -c dead_code,sequences,conditionals,booleans,unused,if_return,join_vars,drop_debugger > dist/js/bundle.js",
-    "build-dev": "browserify src/index.js > src/js/bundle.js",
-    "watch": "watchify src/index.js -d -v -o src/js/bundle.js",
-    "start": "npm run build-dev && npm run serve-dev",
-    "serve": "serve --compress dist/ -p 1618",
-    "serve-dev": "npm run build-dev && serve src/ -p 1618"
+    "build": "gulp clean && gulp production",
+    "build-bundle": "browserify src/index.js -g uglifyify | uglifyjs --screw-ie8 -m -c dead_code,sequences,conditionals,booleans,unused,if_return,join_vars,drop_debugger > public/js/bundle.js",
+    "build-dev": "browserify src/index.js > public/js/bundle.js",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
