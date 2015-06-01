@@ -1,5 +1,6 @@
 #[Famous][1]-[Gulp][2]-Seed
 > A seed project to get started with the famous engine with Browserify and using Gulp as a task manager
+
 The original engine-seed was written with npm commands and allowed for only one entry point.  
 This seed will allow for Multiple entry points.  
 
