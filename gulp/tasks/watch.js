@@ -4,11 +4,12 @@
 */
 
 var gulp     = require('gulp');
-var config   = require('../config');
+var paths   = require('../config').paths;
+var wildcards = paths.wildcards;
 
 gulp.task('watch', ['watchify', 'browserSync'], function() {
-  gulp.watch(config.images.src, ['images']);
-  gulp.watch(config.ico.src, ['ico']);
-  gulp.watch(config.markup.src, ['markup']);
+  gulp.watch(wildcards.images, ['images']);
+  gulp.watch(paths.ico, ['ico']);
+  gulp.watch(wildcards.markup, ['markup']);
   // Watchify will watch and recompile our JS, so no need to gulp.watch it
 });

@@ -1,5 +1,7 @@
 var dest = './public';
 var src = './src';
+var imagesPath = '/images';
+var stylesPath = '/styles';
 
 module.exports = {
   browserSync: {
@@ -8,31 +10,18 @@ module.exports = {
       baseDir: dest
     }
   },
-  images: {
-    src: src + "/images/**",
-    dest: dest + "/images"
-  },
-  ico: {
-    src: src + "/favicon.ico",
-    dest: dest
-  },
-  markup: {
-    src: src + "/**/*.html",
-    dest: dest + ""
-  },
-  styles: {
-    src: src + "/styles/**",
-    dest: dest + "/styles"
-  },
   paths: {
     src: src,
     scripts: src + '/js',
     dest: dest,
+    images: imagesPath,
+    styles: stylesPath,
+    ico: '/favicon.ico',
     wildcards: {
-      scripts: src + '/js/**/*.js',
+      scripts: src + '/**/*.js',
       markup: src + '/**/*.html',
-      styles: src + '/styles/**/*',
-      images: src + '/images/**/*'
+      styles: src + stylesPath + '/**/*',
+      images: src + imagesPath + '/**/*'
     }
   },
   browserify: {

@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var del = require('del');
-var config = require('../config').clean;
+var config = require('../config').paths;
 
 // Not all tasks need to use streams
 // A gulpfile is just another node program and you can use all packages available on npm
