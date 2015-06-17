@@ -6,9 +6,9 @@ import DOMElement from 'famous/dom-renderables/DOMElement';
 
 export class LogoNode {
 
-  constructor(scene) {
+  constructor(node) {
     // create local node onto the passed scene
-    this.rootNode = scene.addChild();
+    this.rootNode = node.addChild();
 
     // Create an [image] DOM element providing the logo 'node' with the 'src' path
     new DOMElement(this.rootNode, { tagName: 'img' })
