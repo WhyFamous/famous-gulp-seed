@@ -2,13 +2,16 @@
    ES6 class
 */
 
+import Node from 'famous/core/Node';
 import DOMElement from 'famous/dom-renderables/DOMElement';
 
-export class LogoNode {
+export class LogoNode extends Node {
 
   constructor(node) {
-    // create local node onto the passed scene
-    this.rootNode = node.addChild();
+    super();
+    //console.log('logonode', this);
+    // create local node onto the passed scene/node
+    this.rootNode = node.addChild(this);
 
     // Create an [image] DOM element providing the logo 'node' with the 'src' path
     new DOMElement(this.rootNode, { tagName: 'img' })
@@ -26,6 +29,5 @@ export class LogoNode {
         // Set the rotational origin to the center of the 'node'
         .setOrigin(0.5, 0.5);
 
-    return this.rootNode;
   }
 }

@@ -16,6 +16,8 @@ export class SpinnerAnimation {
     this.rotateY = () => {
       this.transitionY.from(startAngle).set(Math.PI * 2, { duration: milisecs }, this.rotateY);
     }
+
+    return this.id;
   }
   onUpdate(time) {
     // set a rotation based on time

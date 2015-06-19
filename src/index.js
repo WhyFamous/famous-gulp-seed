@@ -9,9 +9,11 @@ FamousEngine.init();
 
 // Create a scene for the FamousEngine to render
 var scene = FamousEngine.createScene();
+var nextNode = scene.addChild();
 
 // Get a node of the Famous Logo
-var logo = new Logo(scene);
+var logo = new Logo(nextNode);
+console.log('logonode', logo);
 
 // Setup a custom component for animation
 var animation = new Spinner(logo);
