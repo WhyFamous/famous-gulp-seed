@@ -10,7 +10,7 @@ gulp.task('dev', ['clean'], function(callback) {
 
 gulp.task('dev-assets', function(callback) {
   return runSequence(
-    ['images', 'ico', 'markup'],
+    ['images', 'ico', 'markup', 'styles'],
     callback
   );
 });

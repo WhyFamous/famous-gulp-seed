@@ -1,11 +1,11 @@
 var gulp      = require('gulp');
-var config    = require('../config').production;
+var paths    = require('../config').paths;
 var minifyCSS = require('gulp-minify-css');
 var size      = require('gulp-filesize');
 
 gulp.task('minifyCss', function() {
-  return gulp.src(config.cssSrc)
+  return gulp.src(paths.wildcards.styles)
     .pipe(minifyCSS({keepBreaks:true}))
-    .pipe(gulp.dest(config.dest))
+    .pipe(gulp.dest(paths.dest + paths.styles))
     .pipe(size());
 })
