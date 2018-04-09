@@ -1,3 +1,5 @@
+[Obsolete]
+
 #[Famous][1]-[Gulp][2]-Seed
 > A seed project to get started with the famous engine with Browserify and using Gulp as a task manager
 
